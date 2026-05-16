@@ -1,0 +1,20 @@
+Revenue LY = 
+    CALCULATE(
+        [Total Revenue],
+        SAMEPERIODLASTYEAR('Date Table'[Date])
+    )
+
+Revenue YoY % = 
+    DIVIDE([Total Revenue] - [Revenue LY], [Revenue LY], 0)
+
+YTD Revenue = 
+    TOTALYTD([Total Revenue], 'Date Table'[Date])
+
+MTD Revenue = 
+    TOTALMTD([Total Revenue], 'Date Table'[Date])
+
+Revenue MoM = 
+    CALCULATE(
+        [Total Revenue],
+        DATEADD('Date Table'[Date], -1, MONTH)
+    )
