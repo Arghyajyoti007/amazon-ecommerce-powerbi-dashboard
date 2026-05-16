@@ -1,0 +1,11 @@
+Total Revenue = 
+    SUMX(
+        orders_partitioned,
+        orders_partitioned[Sales] * (1 - orders_partitioned[Discount])
+    )
+
+Total Profit = SUM(orders_partitioned[profit])
+
+Profit Margin % = DIVIDE([Total Profit], [Total Revenue], 0)
+
+Total Orders = COUNTROWS(orders_partitioned)
