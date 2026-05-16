@@ -1,0 +1,19 @@
+Shipping Days = 
+    AVERAGEX(
+        orders_partitioned,
+        DATEDIFF(
+            orders_partitioned[order_date],
+            orders_partitioned[ship_date],
+            DAY
+        )
+    )
+
+Loss Orders Count = 
+    CALCULATE(
+        COUNTROWS(orders_partitioned),
+        FILTER(orders_partitioned, orders_partitioned[profit] < 0)
+    )
+
+Loss Orders % = DIVIDE([Loss Orders Count], [Total Orders], 0)
+
+Avg Discount % = AVERAGE(orders_partitioned[Discount])
