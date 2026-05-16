@@ -1,9 +1,9 @@
-      # Amazon E-Commerce Sales Dashboard
+# Amazon E-Commerce Sales Dashboard
 ### AWS + Power BI End-to-End Analytics Solution
 
 ![Page1 Preview](/screenshots/page1_overview.png)
-![Page2 Preview](page2_profitability.png)
-![Page3 Preview](page3_growth.png)
+![Page2 Preview](/screenshots/page2_profitability.png)
+![Page3 Preview](/screenshots/page3_growth.png)
 
 ## Project Overview
 
